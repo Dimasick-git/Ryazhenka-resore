@@ -1,0 +1,8 @@
+{
+  "upstream": {
+    "repository": "Ultra-NX/Ultra-Resources",
+    "releaseTag": "Homebrews",
+    "releaseUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/tag/Homebrews"
+  },
+  "assets": []
+}
