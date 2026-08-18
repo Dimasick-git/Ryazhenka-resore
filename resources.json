@@ -2,7 +2,73 @@
   "upstream": {
     "repository": "Ultra-NX/Ultra-Resources",
     "releaseTag": "Homebrews",
-    "releaseUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/tag/Homebrews"
+    "releaseUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/tag/Homebrews",
+    "publishedAt": "2024-11-14T20:22:31Z"
   },
-  "assets": []
+  "assets": [
+    {
+      "name": "DBI.RU.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/DBI.RU.zip",
+      "sourceDigest": "sha256:ae919a2fa735fbf7839032632aa20753b480a1872dda9a5c2df576c943efc7a5",
+      "sourceUpdatedAt": "2026-07-18T10:43:27Z",
+      "mirrorDigest": "sha256:ae919a2fa735fbf7839032632aa20753b480a1872dda9a5c2df576c943efc7a5",
+      "mirrorSize": 7302219
+    },
+    {
+      "name": "linkalho.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/linkalho.zip",
+      "sourceDigest": "sha256:f5ce2ea1e658e80e09a28c33ea47b1848b21feedeac4bf0810d4c35b477cd229",
+      "sourceUpdatedAt": "2025-12-02T14:59:11Z",
+      "mirrorDigest": "sha256:f5ce2ea1e658e80e09a28c33ea47b1848b21feedeac4bf0810d4c35b477cd229",
+      "mirrorSize": 3099046
+    },
+    {
+      "name": "MicroMemBench.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/MicroMemBench.zip",
+      "sourceDigest": "sha256:020998706fa12ca6c6328f4afeabf7e5d09eb4803a3b9d476bc62298217f868d",
+      "sourceUpdatedAt": "2025-07-24T08:05:27Z",
+      "mirrorDigest": "sha256:020998706fa12ca6c6328f4afeabf7e5d09eb4803a3b9d476bc62298217f868d",
+      "mirrorSize": 134675
+    },
+    {
+      "name": "MasterVolume.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/MasterVolume.zip",
+      "sourceDigest": "sha256:05e63fa2071c9bb156648c2e827c49afb78daf579d50089e6381d25c33a37d60",
+      "sourceUpdatedAt": "2025-12-02T18:24:03Z",
+      "mirrorDigest": "sha256:05e63fa2071c9bb156648c2e827c49afb78daf579d50089e6381d25c33a37d60",
+      "mirrorSize": 432586
+    },
+    {
+      "name": "DuckStation.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/DuckStation.zip",
+      "sourceDigest": "sha256:6b5c74a3ee61c1c3753ceca0076929c9fddb6f17c7ac0896b2843c3231b94af7",
+      "sourceUpdatedAt": "2026-05-07T11:42:16Z",
+      "mirrorDigest": "sha256:6b5c74a3ee61c1c3753ceca0076929c9fddb6f17c7ac0896b2843c3231b94af7",
+      "mirrorSize": 8684518
+    },
+    {
+      "name": "Benchmark-Toolbox.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/Benchmark-Toolbox.zip",
+      "sourceDigest": "sha256:ca3141214d1337bc54b183d69d4ff3fd308c8620a7be5de4b94ea7f3e45b937e",
+      "sourceUpdatedAt": "2026-06-18T17:45:27Z",
+      "mirrorDigest": "sha256:ca3141214d1337bc54b183d69d4ff3fd308c8620a7be5de4b94ea7f3e45b937e",
+      "mirrorSize": 6807846
+    },
+    {
+      "name": "MemToolkitNX.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/MemToolkitNX.zip",
+      "sourceDigest": "",
+      "sourceUpdatedAt": "2025-01-24T14:21:02Z",
+      "mirrorDigest": "sha256:0b8dc0e23457498a51de3001cb2cc87fbb87c9aa1a94d15fc24eaa265176fc21",
+      "mirrorSize": 2332559
+    },
+    {
+      "name": "MemToolkitNX-OLD.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/MemToolkitNX-OLD.zip",
+      "sourceDigest": "",
+      "sourceUpdatedAt": "2025-01-31T21:18:50Z",
+      "mirrorDigest": "sha256:0f42efec7c0ca16c6c71377c740eaa200dafb6202bc0a7120b8d11ab5e4cbaa0",
+      "mirrorSize": 125360
+    }
+  ]
 }
