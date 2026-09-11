@@ -9,10 +9,10 @@
     {
       "name": "DBI.RU.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/DBI.RU.zip",
-      "sourceDigest": "sha256:ae919a2fa735fbf7839032632aa20753b480a1872dda9a5c2df576c943efc7a5",
-      "sourceUpdatedAt": "2026-07-18T10:43:27Z",
-      "mirrorDigest": "sha256:ae919a2fa735fbf7839032632aa20753b480a1872dda9a5c2df576c943efc7a5",
-      "mirrorSize": 7302219
+      "sourceDigest": "sha256:472b38d6ba7090678f7101f7af27e3559194b094c392ea7a7b8cd3fa3bbffa4e",
+      "sourceUpdatedAt": "2026-09-11T07:54:12Z",
+      "mirrorDigest": "sha256:472b38d6ba7090678f7101f7af27e3559194b094c392ea7a7b8cd3fa3bbffa4e",
+      "mirrorSize": 7408352
     },
     {
       "name": "linkalho.zip",
