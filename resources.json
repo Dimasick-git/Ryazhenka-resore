@@ -1,14 +1,23 @@
 {
-  "upstream": {
-    "repository": "Ultra-NX/Ultra-Resources",
-    "releaseTag": "Homebrews",
-    "releaseUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/tag/Homebrews",
-    "publishedAt": "2024-11-14T20:22:31Z"
-  },
+  "upstreams": [
+    {
+      "repository": "Ultra-NX/Ultra-Resources",
+      "releaseTag": "Homebrews",
+      "releaseUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/tag/Homebrews",
+      "publishedAt": "2024-11-14T20:22:31Z"
+    },
+    {
+      "repository": "Ultra-NX/Ultra-Resources",
+      "releaseTag": "Mods",
+      "releaseUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/tag/Mods",
+      "publishedAt": "2024-11-15T06:09:58Z"
+    }
+  ],
   "assets": [
     {
       "name": "DBI.RU.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/DBI.RU.zip",
+      "sourceTag": "Homebrews",
       "sourceDigest": "sha256:4889800d0462436df887bf758701048bbdbdb58e390ad07bb68703c78fa41b92",
       "sourceUpdatedAt": "2026-09-18T08:17:33Z",
       "mirrorDigest": "sha256:4889800d0462436df887bf758701048bbdbdb58e390ad07bb68703c78fa41b92",
@@ -17,6 +26,7 @@
     {
       "name": "linkalho.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/linkalho.zip",
+      "sourceTag": "Homebrews",
       "sourceDigest": "sha256:f5ce2ea1e658e80e09a28c33ea47b1848b21feedeac4bf0810d4c35b477cd229",
       "sourceUpdatedAt": "2025-12-02T14:59:11Z",
       "mirrorDigest": "sha256:f5ce2ea1e658e80e09a28c33ea47b1848b21feedeac4bf0810d4c35b477cd229",
@@ -25,6 +35,7 @@
     {
       "name": "MicroMemBench.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/MicroMemBench.zip",
+      "sourceTag": "Homebrews",
       "sourceDigest": "sha256:020998706fa12ca6c6328f4afeabf7e5d09eb4803a3b9d476bc62298217f868d",
       "sourceUpdatedAt": "2025-07-24T08:05:27Z",
       "mirrorDigest": "sha256:020998706fa12ca6c6328f4afeabf7e5d09eb4803a3b9d476bc62298217f868d",
@@ -33,6 +44,7 @@
     {
       "name": "MasterVolume.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/MasterVolume.zip",
+      "sourceTag": "Homebrews",
       "sourceDigest": "sha256:05e63fa2071c9bb156648c2e827c49afb78daf579d50089e6381d25c33a37d60",
       "sourceUpdatedAt": "2025-12-02T18:24:03Z",
       "mirrorDigest": "sha256:05e63fa2071c9bb156648c2e827c49afb78daf579d50089e6381d25c33a37d60",
@@ -41,6 +53,7 @@
     {
       "name": "DuckStation.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/DuckStation.zip",
+      "sourceTag": "Homebrews",
       "sourceDigest": "sha256:6b5c74a3ee61c1c3753ceca0076929c9fddb6f17c7ac0896b2843c3231b94af7",
       "sourceUpdatedAt": "2026-05-07T11:42:16Z",
       "mirrorDigest": "sha256:6b5c74a3ee61c1c3753ceca0076929c9fddb6f17c7ac0896b2843c3231b94af7",
@@ -49,6 +62,7 @@
     {
       "name": "Benchmark-Toolbox.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/Benchmark-Toolbox.zip",
+      "sourceTag": "Homebrews",
       "sourceDigest": "sha256:ca3141214d1337bc54b183d69d4ff3fd308c8620a7be5de4b94ea7f3e45b937e",
       "sourceUpdatedAt": "2026-06-18T17:45:27Z",
       "mirrorDigest": "sha256:ca3141214d1337bc54b183d69d4ff3fd308c8620a7be5de4b94ea7f3e45b937e",
@@ -57,6 +71,7 @@
     {
       "name": "MemToolkitNX.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/MemToolkitNX.zip",
+      "sourceTag": "Homebrews",
       "sourceDigest": "",
       "sourceUpdatedAt": "2025-01-24T14:21:02Z",
       "mirrorDigest": "sha256:0b8dc0e23457498a51de3001cb2cc87fbb87c9aa1a94d15fc24eaa265176fc21",
@@ -65,10 +80,56 @@
     {
       "name": "MemToolkitNX-OLD.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/MemToolkitNX-OLD.zip",
+      "sourceTag": "Homebrews",
       "sourceDigest": "",
       "sourceUpdatedAt": "2025-01-31T21:18:50Z",
       "mirrorDigest": "sha256:0f42efec7c0ca16c6c71377c740eaa200dafb6202bc0a7120b8d11ab5e4cbaa0",
       "mirrorSize": 125360
+    },
+    {
+      "name": "UltraCam-BotW.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Mods/UltraCam-BotW.zip",
+      "sourceTag": "Mods",
+      "sourceDigest": "",
+      "sourceUpdatedAt": "2025-03-20T03:28:41Z",
+      "mirrorDigest": "sha256:3e7e41e6a10cd8229962c683473596482adb931246f203cfa799b28b8da62a25",
+      "mirrorSize": 107104
+    },
+    {
+      "name": "UltraCam-EoW.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Mods/UltraCam-EoW.zip",
+      "sourceTag": "Mods",
+      "sourceDigest": "",
+      "sourceUpdatedAt": "2025-03-20T03:28:45Z",
+      "mirrorDigest": "sha256:7ee97299f496457b91fa98bfe8e9bf97fb81478d4b9c4c8a827d4eaccd89d4f9",
+      "mirrorSize": 521588
+    },
+    {
+      "name": "UltraCam-TotK.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Mods/UltraCam-TotK.zip",
+      "sourceTag": "Mods",
+      "sourceDigest": "sha256:6b20b62e9dcae7d1bb72e933d8b008cac6cf643e2757db20f8369175abcb53ac",
+      "sourceUpdatedAt": "2025-12-03T04:25:51Z",
+      "mirrorDigest": "sha256:6b20b62e9dcae7d1bb72e933d8b008cac6cf643e2757db20f8369175abcb53ac",
+      "mirrorSize": 131207
+    },
+    {
+      "name": "UltraCam-TotKN.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Mods/UltraCam-TotKN.zip",
+      "sourceTag": "Mods",
+      "sourceDigest": "sha256:a3081d70e0b753a922464b9241f54ff7f7861426ec98bd0265cbd3b97e945ece",
+      "sourceUpdatedAt": "2025-10-17T16:23:47Z",
+      "mirrorDigest": "sha256:a3081d70e0b753a922464b9241f54ff7f7861426ec98bd0265cbd3b97e945ece",
+      "mirrorSize": 953158
+    },
+    {
+      "name": "UltraCam-TotK-Save.zip",
+      "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Mods/UltraCam-TotK-Save.zip",
+      "sourceTag": "Mods",
+      "sourceDigest": "sha256:f5aaa13b20922bec408b042d3ad43a3ff23205ba46b5c4988fc7f10d441c0d7b",
+      "sourceUpdatedAt": "2025-10-17T17:20:15Z",
+      "mirrorDigest": "sha256:f5aaa13b20922bec408b042d3ad43a3ff23205ba46b5c4988fc7f10d441c0d7b",
+      "mirrorSize": 370136
     }
   ]
 }

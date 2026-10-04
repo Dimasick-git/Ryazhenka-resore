@@ -1,108 +1,19 @@
 name: Синхронизация ресурсов Ultra
-
 on:
   workflow_dispatch:
   schedule:
     - cron: '23 */6 * * *'
-
 permissions:
   contents: write
-
 concurrency:
   group: sync-ultra-resources
   cancel-in-progress: false
-
 jobs:
   sync:
-    name: Синхронизация выбранных release-assets
     runs-on: ubuntu-latest
-    env:
-      UPSTREAM_REPOSITORY: Ultra-NX/Ultra-Resources
-      UPSTREAM_TAG: Homebrews
-      MIRROR_TAG: resources
-      ASSET_NAMES: DBI.RU.zip linkalho.zip MicroMemBench.zip MasterVolume.zip DuckStation.zip Benchmark-Toolbox.zip MemToolkitNX.zip MemToolkitNX-OLD.zip
     steps:
-      - name: Получить репозиторий зеркала
-        uses: actions/checkout@v4
-
-      - name: Сверить и получить выбранные ресурсы
+      - uses: actions/checkout@v4
+      - name: Проверить и синхронизировать хоумбрю, моды и сохранения
         env:
           GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          mkdir -p staging
-          release_json="$(mktemp)"
-          gh api "/repos/${UPSTREAM_REPOSITORY}/releases/tags/${UPSTREAM_TAG}" > "$release_json"
-
-          upstream_url="$(jq -r '.html_url' "$release_json")"
-          upstream_published="$(jq -r '.published_at' "$release_json")"
-          assets_tmp="$(mktemp)"
-          manifest_tmp="$(mktemp)"
-          printf '[]\n' > "$assets_tmp"
-
-          for asset_name in ${ASSET_NAMES}; do
-            source_url="$(jq -r --arg name "$asset_name" '.assets[] | select(.name == $name) | .browser_download_url' "$release_json")"
-            source_digest="$(jq -r --arg name "$asset_name" '.assets[] | select(.name == $name) | (.digest // "")' "$release_json")"
-            source_updated="$(jq -r --arg name "$asset_name" '.assets[] | select(.name == $name) | .updated_at' "$release_json")"
-
-            if [ -z "$source_url" ] || [ "$source_url" = "null" ]; then
-              echo "Не найден обязательный asset: $asset_name" >&2
-              exit 1
-            fi
-
-            curl --fail --location --retry 3 --silent --show-error "$source_url" --output "staging/$asset_name"
-            mirror_digest="sha256:$(sha256sum "staging/$asset_name" | awk '{print $1}')"
-            mirror_size="$(stat --printf='%s' "staging/$asset_name")"
-
-            asset_record="$(jq -n \
-              --arg name "$asset_name" \
-              --arg source_url "$source_url" \
-              --arg source_digest "$source_digest" \
-              --arg source_updated "$source_updated" \
-              --arg mirror_digest "$mirror_digest" \
-              --argjson mirror_size "$mirror_size" \
-              '{name: $name, sourceUrl: $source_url, sourceDigest: $source_digest, sourceUpdatedAt: $source_updated, mirrorDigest: $mirror_digest, mirrorSize: $mirror_size}')"
-            jq --argjson asset "$asset_record" '. + [$asset]' "$assets_tmp" > "${assets_tmp}.next"
-            mv "${assets_tmp}.next" "$assets_tmp"
-          done
-
-          jq -n \
-            --arg repository "$UPSTREAM_REPOSITORY" \
-            --arg release_tag "$UPSTREAM_TAG" \
-            --arg release_url "$upstream_url" \
-            --arg published_at "$upstream_published" \
-            --slurpfile assets "$assets_tmp" \
-            '{upstream: {repository: $repository, releaseTag: $release_tag, releaseUrl: $release_url, publishedAt: $published_at}, assets: $assets[0]}' > "$manifest_tmp"
-
-          changed=false
-          if ! cmp -s "$manifest_tmp" resources.json; then
-            mv "$manifest_tmp" resources.json
-            changed=true
-          fi
-
-          cat > release-notes.md <<EOF
-          Зеркало выбранных assets из [${UPSTREAM_REPOSITORY}](${upstream_url}), release \\`${UPSTREAM_TAG}\\`.
-
-          Файлы копируются без изменения содержимого. Источники и контрольные суммы указаны в [resources.json](https://github.com/${GITHUB_REPOSITORY}/blob/main/resources.json).
-          EOF
-
-          git config user.name "Ryazhenka Resources Bot"
-          git config user.email "actions@github.com"
-          git add resources.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Синхронизировать ресурсы Ultra"
-            git push origin HEAD:main
-            changed=true
-          fi
-
-          if gh release view "$MIRROR_TAG" >/dev/null 2>&1; then
-            gh release edit "$MIRROR_TAG" --title "Ресурсы Ряженки" --notes-file release-notes.md
-          else
-            gh release create "$MIRROR_TAG" --target main --title "Ресурсы Ряженки" --notes-file release-notes.md
-          fi
-
-          if [ "$changed" = true ]; then
-            gh release upload "$MIRROR_TAG" staging/* --clobber
-          fi
+        run: python3 sync_resources.py --publish

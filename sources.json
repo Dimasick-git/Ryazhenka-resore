@@ -1,0 +1,27 @@
+[
+  {
+    "repository": "Ultra-NX/Ultra-Resources",
+    "tag": "Homebrews",
+    "assets": [
+      "DBI.RU.zip",
+      "linkalho.zip",
+      "MicroMemBench.zip",
+      "MasterVolume.zip",
+      "DuckStation.zip",
+      "Benchmark-Toolbox.zip",
+      "MemToolkitNX.zip",
+      "MemToolkitNX-OLD.zip"
+    ]
+  },
+  {
+    "repository": "Ultra-NX/Ultra-Resources",
+    "tag": "Mods",
+    "assets": [
+      "UltraCam-BotW.zip",
+      "UltraCam-EoW.zip",
+      "UltraCam-TotK.zip",
+      "UltraCam-TotKN.zip",
+      "UltraCam-TotK-Save.zip"
+    ]
+  }
+]
