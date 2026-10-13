@@ -54,10 +54,10 @@
       "name": "DuckStation.zip",
       "sourceUrl": "https://github.com/Ultra-NX/Ultra-Resources/releases/download/Homebrews/DuckStation.zip",
       "sourceTag": "Homebrews",
-      "sourceDigest": "sha256:6b5c74a3ee61c1c3753ceca0076929c9fddb6f17c7ac0896b2843c3231b94af7",
-      "sourceUpdatedAt": "2026-05-07T11:42:16Z",
-      "mirrorDigest": "sha256:6b5c74a3ee61c1c3753ceca0076929c9fddb6f17c7ac0896b2843c3231b94af7",
-      "mirrorSize": 8684518
+      "sourceDigest": "sha256:e33cce6973223e1f5889dcbd5e8165cd52304864e514c117319ec1405c227502",
+      "sourceUpdatedAt": "2026-10-12T19:28:27Z",
+      "mirrorDigest": "sha256:e33cce6973223e1f5889dcbd5e8165cd52304864e514c117319ec1405c227502",
+      "mirrorSize": 10352873
     },
     {
       "name": "Benchmark-Toolbox.zip",
